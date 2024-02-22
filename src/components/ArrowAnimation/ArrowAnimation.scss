@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+.arrow-animation {
+	position: fixed;
+	bottom: $s-20;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: opacity 0.5s ease;
+	animation: move 1.4s infinite ease-in-out;
+
+	&__item {
+		font-size: $s-32;
+	}
+}
+
+.hidden {
+	opacity: 0;
+}
+
+@keyframes move {
+	0% {
+		bottom: $s-40;
+	}
+	50% {
+		bottom: $s-20;
+	}
+	100% {
+		bottom: $s-40;
+	}
+}

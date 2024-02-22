@@ -1,0 +1,296 @@
+@import '../../App.scss';
+
+.about {
+	width: 85%;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	padding: $s-80 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__personal {
+		display: flex;
+		gap: $s-40;
+		width: 100%;
+		align-items: start;
+		min-height: calc(100vh - 16rem);
+		padding: 0 $s-40;
+
+		&__img {
+			height: auto;
+			width: 30%;
+			flex: 0 0 auto;
+			pointer-events: none;
+
+			& img {
+				height: 100%;
+				width: 100%;
+				border-radius: $s-8;
+			}
+		}
+
+		&__description {
+			width: 100%;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			gap: $s-32;
+
+			&__text {
+				font-size: $s-16;
+				font-weight: 500;
+				line-height: $s-32;
+				text-align: center;
+
+				& span {
+					font-weight: 600;
+					color: $c-primary-300;
+				}
+			}
+
+			&__socials {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: $s-40;
+
+				&__icon {
+					font-size: $s-28;
+				}
+
+				&__link {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: $s-56;
+					width: $s-56;
+					border: 2px solid $c-basic-black;
+					border-radius: 50%;
+					transition: transform 0.3s ease;
+					box-shadow: 2px 4px 4px $c-neutral-300;
+
+					&:hover {
+						transform: scale(0.97) translateY(2px);
+						box-shadow: 1px 1px 5px $c-neutral-300;
+					}
+				}
+			}
+		}
+	}
+
+	&__tabs {
+		width: 50%;
+		box-shadow: 0px 3px 14px $c-neutral-300;
+		margin-bottom: $s-24;
+		border-radius: $s-40;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: $s-4;
+		margin-top: $s-40;
+
+		&__tab {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: $s-16 0;
+			font-size: $s-16;
+			font-weight: 700;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			border-radius: $s-8;
+
+			&:first-child {
+				border-radius: $s-40 $s-8 $s-8 $s-40;
+			}
+			&:last-child {
+				border-radius: $s-8 $s-40 $s-40 $s-8;
+			}
+		}
+	}
+
+	&__experience {
+		width: 100%;
+		padding: 0 $s-40;
+		display: flex;
+		flex-direction: column;
+
+		&__cards {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: $s-16;
+		}
+	}
+
+	&__training {
+		width: 100%;
+		padding: 0 $s-40;
+		display: flex;
+		flex-direction: column;
+
+		&__cards {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: $s-16;
+		}
+	}
+
+	&__skills-wrapper {
+		width: 100%;
+		padding: 0 $s-40;
+		margin-top: $s-40;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: $s-80;
+		grid-row-gap: $s-48;
+		justify-items: center;
+	}
+
+	&__skills {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: $s-24;
+
+		&__title {
+			text-transform: uppercase;
+			width: fit-content;
+			padding-bottom: 0.6rem;
+			display: flex;
+			align-items: center;
+			gap: 0.8rem;
+
+			&__icon {
+				font-size: 2.2rem;
+			}
+
+			&__text {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.about {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.about {
+		width: 95%;
+		padding: $s-40 0;
+
+		&__personal {
+			flex-direction: column;
+			gap: $s-40;
+
+			&__img {
+				width: 60%;
+				margin: 0 auto;
+			}
+
+			&__description {
+				&__socials {
+					margin-bottom: $s-80;
+				}
+			}
+		}
+
+		&__skills-wrapper {
+			grid-column-gap: $s-56;
+		}
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.about {
+		width: 100%;
+		padding: $s-40 0;
+
+		&__experience {
+			&__cards {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+				gap: $s-16;
+			}
+		}
+
+		&__training {
+			&__cards {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+				gap: $s-16;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.about {
+		&__personal {
+			&__img {
+				width: 100%;
+			}
+		}
+
+		&__tabs {
+			width: 75%;
+		}
+
+		&__skills-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.about {
+		padding: $s-16 0;
+
+		&__personal {
+			gap: $s-40;
+
+			padding: 0 $s-16;
+
+			&__description {
+				gap: $s-32;
+
+				&__socials {
+					gap: $s-16;
+				}
+			}
+		}
+
+		&__tabs {
+			width: 75%;
+			margin-top: $s-48;
+
+			&__tab {
+				padding: $s-12 0;
+			}
+		}
+
+		&__experience {
+			padding: 0 $s-16;
+		}
+
+		&__training {
+			padding: 0 $s-16;
+		}
+
+		&__skills-wrapper {
+			padding: 0 $s-16;
+			margin-top: $s-48;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@import '../../App.scss';
+
+.footer {
+	width: 100%;
+	height: $s-48;
+	background-color: $c-basic-white;
+	color: $c-basic-black;
+	padding: $s-16 $s-40;
+	text-align: right;
+	font-size: $s-14;
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: $s-28;
+
+		&__link {
+			font-size: $s-24;
+			display: flex;
+			align-items: center;
+
+			&:hover {
+				transform: scale(1.1);
+				color: $c-primary-500;
+			}
+		}
+	}
+	& span {
+		font-weight: 700;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.footer {
+		height: 10rem;
+		padding: $s-16 $s-24;
+		text-align: center;
+		font-size: $s-12;
+		flex-direction: column;
+		gap: $s-16;
+
+		&__socials {
+			gap: $s-40;
+
+			&__link {
+				font-size: $s-32;
+				display: flex;
+				align-items: center;
+
+				&:hover {
+					transform: scale(1.1);
+					color: $c-primary-500;
+				}
+			}
+		}
+		& span {
+			font-weight: 700;
+		}
+	}
+}

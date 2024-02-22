@@ -1,0 +1,40 @@
+@import '../../App.scss';
+
+.button {
+	display: inline-block;
+	border-radius: $s-8;
+	font-size: $s-16;
+	font-weight: 600;
+	cursor: pointer;
+	padding: $s-12 $s-56;
+	box-shadow: 2px 4px 4px $c-neutral-300;
+
+	&.primary {
+		background-color: $c-primary-300;
+		color: $c-basic-white;
+		border: 2px solid $c-primary-300;
+	}
+	&.secondary {
+		border: 2px solid $c-primary-500;
+		color: $c-primary-500;
+	}
+
+	&:hover {
+		transform: scale(0.97) translateY(2px);
+		box-shadow: 1px 1px 5px $c-neutral-300;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.button {
+		font-size: $s-14;
+		padding: $s-12 $s-48;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.button {
+		font-size: $s-12;
+		padding: $s-10 $s-40;
+	}
+}

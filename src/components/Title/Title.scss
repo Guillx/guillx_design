@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+.title {
+	width: fit-content;
+	position: relative;
+
+	&__label {
+		font-size: $s-40;
+	}
+
+	&__line {
+		width: 14rem;
+		position: absolute;
+		bottom: -$s-16;
+		right: $s-4;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.title {
+		&__label {
+			font-size: $s-32;
+		}
+
+		&__line {
+			width: 12rem;
+			right: $s-8;
+		}
+	}
+}

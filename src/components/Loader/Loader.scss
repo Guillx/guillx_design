@@ -1,0 +1,38 @@
+// Loader.scss
+@import '../../App.scss';
+
+.loader {
+	height: calc(100vh - $s-80 - $s-48);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	gap: $s-16;
+
+	&__icon {
+		height: $s-40;
+		animation: grow 1.5s ease-in-out infinite;
+	}
+
+	&__text {
+		font-size: $s-16;
+		font-weight: 500;
+		animation: grow 1.5s ease-in-out infinite;
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(0);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+}

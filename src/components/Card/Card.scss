@@ -1,0 +1,115 @@
+@import '../../App.scss';
+
+.card {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: $s-24 $s-40;
+	border-radius: $s-12;
+	gap: $s-32;
+	box-shadow: 1px 2px 8px $c-neutral-300;
+	transition: transform 0.2s;
+
+	&:hover {
+		transform: scale3d(1.008, 1.008, 1);
+		box-shadow: 2px 4px 12px $c-neutral-500;
+	}
+
+	&__logo {
+		height: 6rem;
+		width: 6rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			border-radius: $s-8;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		&__date {
+			font-size: $s-14;
+			font-weight: 500;
+			color: $c-neutral-700;
+			margin-bottom: $s-12;
+			text-align: center;
+		}
+
+		&__title {
+			font-size: $s-16;
+			font-weight: 700;
+			margin-bottom: $s-12;
+			text-align: center;
+			padding: $s-16 0;
+			background-color: rgb(238, 238, 238);
+			border-radius: $s-8;
+			color: $c-basic-black;
+		}
+
+		&__company {
+			font-size: $s-14;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: $s-8;
+		}
+
+		&__location {
+			font-size: $s-14;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: $s-8;
+		}
+
+		&__description {
+			font-size: $s-16;
+			font-weight: 400;
+			line-height: $s-28;
+			color: $c-neutral-700;
+			text-align: center;
+			margin-top: $s-16;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.card {
+		padding: $s-24 $s-16;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.card {
+		&__container {
+			flex-direction: column-reverse;
+			gap: $s-12;
+			align-items: flex-start;
+		}
+
+		&__content {
+			&__title {
+				font-size: $s-14;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.card {
+		flex-direction: column;
+
+		&__logo {
+			width: 10rem;
+			height: 10rem;
+		}
+	}
+}

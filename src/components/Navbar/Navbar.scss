@@ -1,0 +1,152 @@
+@import '../../App.scss';
+
+.active {
+	background-color: $c-primary-300;
+	color: $c-basic-white;
+}
+
+.navbar {
+	height: $s-80;
+	width: 100%;
+	background-color: $c-basic-white;
+	box-shadow: 0 2px 8px $c-neutral-50;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 $s-40;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	&__logo {
+		height: $s-48;
+		cursor: pointer;
+		transition: transform 0.4s ease-in-out;
+
+		&:hover {
+			transform: scale(1.04);
+		}
+	}
+
+	&__menu-toggle {
+		display: none;
+
+		&__close-icon {
+			font-size: $s-32;
+		}
+		&__open-icon {
+			font-size: $s-32;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: $s-8;
+
+		&--mobile {
+			flex-direction: column;
+			position: absolute;
+			top: $s-80;
+			left: 0;
+			right: 0;
+			background-color: $c-basic-white;
+			padding: $s-16 0;
+			display: none;
+
+			&__item {
+				font-size: $s-14;
+				font-weight: 500;
+
+				& a {
+					padding: $s-8 $s-24;
+					border-radius: $s-8;
+				}
+			}
+		}
+
+		&__item {
+			font-size: $s-14;
+			font-weight: 500;
+			position: relative;
+
+			& a {
+				padding: $s-8 $s-24;
+				border-radius: $s-8;
+			}
+
+			&:hover {
+				color: $c-primary-300;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.navbar {
+		&__menu-toggle {
+			display: block;
+			cursor: pointer;
+		}
+
+		&__list {
+			display: none;
+		}
+
+		&__list--mobile {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: $s-80;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: $c-basic-white;
+			z-index: 1000;
+			height: calc(100vh - $s-80 - $s-48);
+		}
+
+		&__list__item {
+			width: 100%;
+			text-align: center;
+
+			&:hover {
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		&__list__item a {
+			display: block;
+			padding: $s-32 $s-40;
+			text-decoration: none;
+			color: $c-basic-black;
+			font-size: $s-24;
+			font-weight: 600;
+			border-radius: 0;
+
+			&.active {
+				background-color: $c-primary-300;
+				color: $c-basic-white;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.navbar {
+		padding: 0 $s-32;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.navbar {
+		padding: 0 $s-16;
+
+		&__logo {
+			height: $s-40;
+		}
+	}
+}

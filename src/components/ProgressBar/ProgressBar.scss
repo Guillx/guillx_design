@@ -1,0 +1,57 @@
+@import '../../App.scss';
+
+.progress-bar {
+	width: 100%;
+
+	&__item {
+		&__label-container {
+			display: flex;
+			align-items: center;
+			gap: 0.8rem;
+			margin-bottom: 0.6rem;
+		}
+
+		&__icon {
+			font-size: 1.8rem;
+			color: $c-basic-black;
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		&__label {
+			font-size: 1.4rem;
+			color: $c-basic-black;
+		}
+
+		&__bg-bar {
+			background-color: $c-primary-100;
+			border-radius: 0.4rem;
+			height: 0.8rem;
+		}
+
+		&__progress-bar {
+			background-color: $c-primary-300;
+			color: $c-basic-white;
+			text-align: center;
+			border-radius: 0.4rem;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: right;
+			position: relative;
+		}
+
+		&__percentage {
+			color: $c-basic-white;
+			font-size: 1.2rem;
+			font-weight: 500;
+			position: absolute;
+			right: 0.2rem;
+			bottom: 1.2rem;
+			background-color: $c-primary-300;
+			padding: 0.2rem 0.4rem;
+			border-radius: 0.4rem;
+		}
+	}
+}
