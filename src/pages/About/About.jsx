@@ -184,6 +184,7 @@ export default function About() {
 						{designSkillsData.map((item) => {
 							return (
 								<ProgressBar
+									key={item.id}
 									icon={item.icon}
 									label={item.label}
 									percentage={item.percentage}

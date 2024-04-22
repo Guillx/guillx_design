@@ -23,10 +23,11 @@ export default function Projects() {
 			<section className='projects'>
 				<Title title='Projects' />
 				<div className='projects__wrapper'>
-					<Link
-						to='https://www.behance.net/gallery/190940569/Restaurant-Table-Reservation-App-(UX-Case-Study)'
+					<a
+						href='https://www.behance.net/gallery/190940569/Restaurant-Table-Reservation-App-(UX-Case-Study)'
 						className='projects__wrapper__item'
 						target='_blank'
+						rel='noopener noreferrer'
 					>
 						<img
 							src={DissentioCover}
@@ -38,7 +39,7 @@ export default function Projects() {
 								Dissentio
 							</h3>
 						</div>
-					</Link>
+					</a>
 					<div className='projects__wrapper__item'>
 						<img
 							src={ComingSoonCover}
