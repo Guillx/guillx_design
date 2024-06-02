@@ -44,7 +44,7 @@
 				font-size: $s-16;
 				font-weight: 500;
 				line-height: $s-32;
-				text-align: center;
+				text-align: left;
 
 				& span {
 					font-weight: 600;
@@ -57,18 +57,18 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				gap: $s-40;
+				gap: $s-24;
 
 				&__icon {
-					font-size: $s-28;
+					font-size: $s-24;
 				}
 
 				&__link {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					height: $s-56;
-					width: $s-56;
+					height: $s-48;
+					width: $s-48;
 					border: 2px solid $c-basic-black;
 					border-radius: 50%;
 					transition: transform 0.3s ease;
@@ -77,6 +77,8 @@
 					&:hover {
 						transform: scale(0.97) translateY(2px);
 						box-shadow: 1px 1px 5px $c-neutral-300;
+						color: $c-primary-500;
+						border: 2px solid $c-primary-500;
 					}
 				}
 			}

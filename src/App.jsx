@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	useLocation,
+} from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
@@ -24,7 +29,7 @@ function App() {
 	return loading ? (
 		<Loader />
 	) : (
-		<>
+		<div className='App'>
 			<Navbar />
 
 			<Routes location={location} key={location.pathname}>
@@ -35,7 +40,7 @@ function App() {
 			</Routes>
 
 			<Footer />
-		</>
+		</div>
 	);
 }
 

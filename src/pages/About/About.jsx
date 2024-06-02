@@ -58,9 +58,9 @@ export default function About() {
 							with them, and creating solutions that adapt to the
 							widest number of people.
 							<br /> Beyond technology, I love traveling, taking walks
-							in nature and everything related to art and music. I
-							play traditional galician percussion and I plan to learn
-							how to play piano soon.
+							in nature, plants and everything related to art and
+							music. I play traditional galician percussion and I am
+							learning to play the piano.
 						</p>
 						<div className='about__personal__description__socials'>
 							<a
