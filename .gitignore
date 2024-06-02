@@ -27,8 +27,6 @@ yarn-error.log*
 *.swp
 Thumbs.db
 
-assets/
-
 .env.local
 .env.development.local
 .env.test.local
